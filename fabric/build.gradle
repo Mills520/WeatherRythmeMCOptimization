@@ -13,7 +13,9 @@ apply plugin: 'fabric-loom'
 apply plugin: 'maven-publish'
 
 version = project.findProperty('mod_version') ?: '1.0.0'
-archivesBaseName = "weatherrythme-fabric-${project.findProperty('minecraft_version') ?: '1.21.1'}"
+base {
+    archivesName = "weatherrythme-fabric-${project.findProperty('minecraft_version') ?: '1.21.1'}"
+}
 
 repositories {
     maven { url = 'https://maven.fabricmc.net/' }
