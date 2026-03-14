@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[37,)"
+license="MIT"
+
+[[mods]]
+modId="weatherrythme"
+version="${file.jarVersion}"
+displayName="WeatherRythme"
+authors="Mills520"
+description='''
+Randomly changes overworld weather every 5-15 minutes.
+'''
+credits="Made by Mills520. Thanks to all contributors on GitHub under the contributors tag."
+
+[[dependencies.weatherrythme]]
+modId="forge"
+mandatory=true
+versionRange="[37,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.weatherrythme]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.17.1,1.22)"
+ordering="NONE"
+side="BOTH"
