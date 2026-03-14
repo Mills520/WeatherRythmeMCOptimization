@@ -35,6 +35,7 @@ ensure_gradle() {
 }
 
 GRADLE_CMD="$(ensure_gradle)"
+mkdir -p "$DIST_DIR"
 
 # Minecraft versions requested by user (1.21.11 interpreted as latest Java release line 1.21.1).
 VERSIONS=("1.17.1" "1.18.2" "1.19.2" "1.20.1" "1.21.1")
@@ -67,6 +68,7 @@ declare -A FORGE=(
 for v in "${VERSIONS[@]}"; do
   echo "==> Building Fabric $v"
   (cd "$ROOT_DIR" && "$GRADLE_CMD" -p fabric clean build \
+  (cd "$ROOT_DIR" && gradle -p fabric clean build \
     -Pminecraft_version="$v" \
     -Pyarn_mappings="${v}+build.1" \
     -Pfabric_loader_version="${LOADER[$v]}" \
@@ -77,6 +79,7 @@ for v in "${VERSIONS[@]}"; do
 
   echo "==> Building Forge $v"
   (cd "$ROOT_DIR" && "$GRADLE_CMD" -p forge clean build \
+  (cd "$ROOT_DIR" && gradle -p forge clean build \
     -Pminecraft_version="$v" \
     -Pforge_version="${FORGE[$v]}")
 

@@ -34,3 +34,10 @@ Note: binary icon assets were intentionally removed to keep patch/PR flows compa
 
 ## Build artifacts on GitHub Actions
 A workflow is included at `.github/workflows/build-jars.yml` to compile all version/loader combinations and upload artifact bundles automatically on pushes, pull requests, or manual dispatch.
+
+## Build artifacts on GitHub Actions
+A workflow is included at `.github/workflows/build-jars.yml` to compile all version/loader combinations and upload artifact bundles automatically on pushes, pull requests, or manual dispatch.
+
+
+
+Also you can download pre made from modrinth or realeases
