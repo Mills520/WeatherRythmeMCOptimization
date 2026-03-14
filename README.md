@@ -19,6 +19,8 @@ Use the helper script to build Fabric and Forge jars for each targeted version:
 ./scripts/build_all.sh
 ```
 
+The script automatically uses your system Gradle when it is compatible (8+), otherwise it downloads a local Gradle `8.14.3` toolchain into `.tools/` and uses that.
+
 Build output is copied into:
 
 - `dist/fabric/<mc_version>/`
@@ -30,6 +32,8 @@ Each build is configured to produce:
 
 Note: binary icon assets were intentionally removed to keep patch/PR flows compatible with platforms that reject binary diffs.
 
+## Build artifacts on GitHub Actions
+A workflow is included at `.github/workflows/build-jars.yml` to compile all version/loader combinations and upload artifact bundles automatically on pushes, pull requests, or manual dispatch.
 
 ## Build artifacts on GitHub Actions
 A workflow is included at `.github/workflows/build-jars.yml` to compile all version/loader combinations and upload artifact bundles automatically on pushes, pull requests, or manual dispatch.
