@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "weatherrythme",
+  "version": "${version}",
+  "name": "WeatherRythme",
+  "description": "Randomly changes overworld weather every 5-15 minutes.",
+  "authors": [
+    "Mills520"
+  ],
+  "contact": {
+    "sources": "https://github.com"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.mills520.weatherrythme.WeatherRythmeFabricMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": ">=1.17.1 <=1.21.1",
+    "java": ">=17"
+  },
+  "custom": {
+    "credits": "Made by Mills520. Thanks to all contributors on GitHub under the contributors tag."
+  }
+}
