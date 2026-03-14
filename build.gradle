@@ -1,0 +1,4 @@
+allprojects {
+    group = 'io.github.mills520'
+    version = '1.0.0'
+}
